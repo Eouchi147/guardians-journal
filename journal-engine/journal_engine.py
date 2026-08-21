@@ -237,7 +237,7 @@ def launch_web() -> None:
         raise JournalEngineError(
             "Streamlit is not installed. Run: pip install -r requirements.txt"
         ) from exc
-    app = os.path.join(os.path.dirname(os.path.abspath(__file__)), "app.py")
+    app = os.path.join(os.path.dirname(os.path.abspath(__file__)), "streamlit_app.py")
     sys.argv = ["streamlit", "run", app, "--server.headless=true"]
     raise SystemExit(stcli.main())
 
